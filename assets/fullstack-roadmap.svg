@@ -1,0 +1,223 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#2c3e50">
+    Fullstack Developer Learning Path
+  </text>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 70)">
+    <rect x="0" y="0" width="20" height="20" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+    <text x="30" y="15" font-size="14" fill="#2c3e50">Frontend</text>
+    
+    <rect x="150" y="0" width="20" height="20" fill="#e74c3c" stroke="#2c3e50" stroke-width="2"/>
+    <text x="180" y="15" font-size="14" fill="#2c3e50">Backend</text>
+    
+    <rect x="300" y="0" width="20" height="20" fill="#f39c12" stroke="#2c3e50" stroke-width="2"/>
+    <text x="330" y="15" font-size="14" fill="#2c3e50">Database</text>
+    
+    <rect x="450" y="0" width="20" height="20" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
+    <text x="480" y="15" font-size="14" fill="#2c3e50">DevOps</text>
+    
+    <rect x="600" y="0" width="20" height="20" fill="#9b59b6" stroke="#2c3e50" stroke-width="2"/>
+    <text x="630" y="15" font-size="14" fill="#2c3e50">Tools</text>
+  </g>
+  
+  <!-- Main Container -->
+  <g transform="translate(50, 120)">
+    
+    <!-- 1. Foundation -->
+    <g id="foundation">
+      <rect x="0" y="0" width="1100" height="100" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2" rx="5"/>
+      <text x="550" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Foundation</text>
+      
+      <!-- Foundation items -->
+      <rect x="20" y="40" width="160" height="50" fill="#95a5a6" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="100" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">HTML & CSS</text>
+      <text x="100" y="78" text-anchor="middle" font-size="11" fill="white">Structure & Styling</text>
+      
+      <rect x="200" y="40" width="160" height="50" fill="#95a5a6" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="280" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">JavaScript</text>
+      <text x="280" y="78" text-anchor="middle" font-size="11" fill="white">Programming Basics</text>
+      
+      <rect x="380" y="40" width="160" height="50" fill="#9b59b6" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="460" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Git & GitHub</text>
+      <text x="460" y="78" text-anchor="middle" font-size="11" fill="white">Version Control</text>
+      
+      <rect x="560" y="40" width="160" height="50" fill="#9b59b6" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="640" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Command Line</text>
+      <text x="640" y="78" text-anchor="middle" font-size="11" fill="white">Terminal Basics</text>
+      
+      <rect x="740" y="40" width="160" height="50" fill="#95a5a6" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="820" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">HTTP/HTTPS</text>
+      <text x="820" y="78" text-anchor="middle" font-size="11" fill="white">Web Protocols</text>
+      
+      <rect x="920" y="40" width="160" height="50" fill="#9b59b6" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="1000" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">VS Code</text>
+      <text x="1000" y="78" text-anchor="middle" font-size="11" fill="white">Code Editor</text>
+    </g>
+    
+    <!-- Arrow down -->
+    <path d="M 550 110 L 550 130" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowhead)"/>
+    
+    <!-- 2. Frontend Development -->
+    <g id="frontend" transform="translate(0, 140)">
+      <rect x="0" y="0" width="540" height="200" fill="#e8f4f8" stroke="#3498db" stroke-width="3" rx="5"/>
+      <text x="270" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#3498db">Frontend Development</text>
+      
+      <!-- Frontend items -->
+      <rect x="20" y="50" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="95" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">React.js</text>
+      
+      <rect x="190" y="50" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="265" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">State Management</text>
+      
+      <rect x="360" y="50" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="435" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">CSS Frameworks</text>
+      
+      <rect x="20" y="100" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="95" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Responsive Design</text>
+      
+      <rect x="190" y="100" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="265" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="white">API Integration</text>
+      
+      <rect x="360" y="100" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="435" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Build Tools</text>
+      
+      <rect x="20" y="150" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="95" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Testing (Jest)</text>
+      
+      <rect x="190" y="150" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="265" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="white">TypeScript</text>
+      
+      <rect x="360" y="150" width="150" height="40" fill="#3498db" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="435" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Next.js</text>
+    </g>
+    
+    <!-- 3. Backend Development -->
+    <g id="backend" transform="translate(560, 140)">
+      <rect x="0" y="0" width="540" height="200" fill="#fdeaea" stroke="#e74c3c" stroke-width="3" rx="5"/>
+      <text x="270" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#e74c3c">Backend Development</text>
+      
+      <!-- Backend items -->
+      <rect x="20" y="50" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="95" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Node.js</text>
+      
+      <rect x="190" y="50" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="265" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Express.js</text>
+      
+      <rect x="360" y="50" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="435" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">RESTful APIs</text>
+      
+      <rect x="20" y="100" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="95" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Authentication</text>
+      
+      <rect x="190" y="100" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="265" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Middleware</text>
+      
+      <rect x="360" y="100" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="435" y="125" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Security</text>
+      
+      <rect x="20" y="150" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="95" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Testing (Mocha)</text>
+      
+      <rect x="190" y="150" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="265" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="white">GraphQL</text>
+      
+      <rect x="360" y="150" width="150" height="40" fill="#e74c3c" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="435" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Microservices</text>
+    </g>
+    
+    <!-- Arrows down -->
+    <path d="M 270 350 L 270 370" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <path d="M 830 350 L 830 370" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowhead)"/>
+    
+    <!-- 4. Database & Storage -->
+    <g id="database" transform="translate(0, 380)">
+      <rect x="0" y="0" width="1100" height="100" fill="#fef5e7" stroke="#f39c12" stroke-width="3" rx="5"/>
+      <text x="550" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#f39c12">Database & Storage</text>
+      
+      <!-- Database items -->
+      <rect x="20" y="40" width="160" height="50" fill="#f39c12" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="100" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">MongoDB</text>
+      <text x="100" y="78" text-anchor="middle" font-size="11" fill="white">NoSQL</text>
+      
+      <rect x="200" y="40" width="160" height="50" fill="#f39c12" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="280" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">PostgreSQL</text>
+      <text x="280" y="78" text-anchor="middle" font-size="11" fill="white">SQL</text>
+      
+      <rect x="380" y="40" width="160" height="50" fill="#f39c12" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="460" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Redis</text>
+      <text x="460" y="78" text-anchor="middle" font-size="11" fill="white">Caching</text>
+      
+      <rect x="560" y="40" width="160" height="50" fill="#f39c12" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="640" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">ORM/ODM</text>
+      <text x="640" y="78" text-anchor="middle" font-size="11" fill="white">Mongoose/Sequelize</text>
+      
+      <rect x="740" y="40" width="160" height="50" fill="#f39c12" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="820" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Cloud Storage</text>
+      <text x="820" y="78" text-anchor="middle" font-size="11" fill="white">S3/CloudStorage</text>
+      
+      <rect x="920" y="40" width="160" height="50" fill="#f39c12" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="1000" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Database Design</text>
+      <text x="1000" y="78" text-anchor="middle" font-size="11" fill="white">Schema/Relations</text>
+    </g>
+    
+    <!-- Arrow down -->
+    <path d="M 550 490 L 550 510" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrowhead)"/>
+    
+    <!-- 5. DevOps & Deployment -->
+    <g id="devops" transform="translate(0, 520)">
+      <rect x="0" y="0" width="1100" height="100" fill="#e8f8f5" stroke="#27ae60" stroke-width="3" rx="5"/>
+      <text x="550" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#27ae60">DevOps & Deployment</text>
+      
+      <!-- DevOps items -->
+      <rect x="20" y="40" width="120" height="50" fill="#27ae60" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="80" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Docker</text>
+      <text x="80" y="78" text-anchor="middle" font-size="11" fill="white">Containers</text>
+      
+      <rect x="160" y="40" width="120" height="50" fill="#27ae60" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="220" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="white">CI/CD</text>
+      <text x="220" y="78" text-anchor="middle" font-size="11" fill="white">GitHub Actions</text>
+      
+      <rect x="300" y="40" width="120" height="50" fill="#27ae60" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="360" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="white">AWS/GCP</text>
+      <text x="360" y="78" text-anchor="middle" font-size="11" fill="white">Cloud Services</text>
+      
+      <rect x="440" y="40" width="120" height="50" fill="#27ae60" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="500" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Nginx</text>
+      <text x="500" y="78" text-anchor="middle" font-size="11" fill="white">Web Server</text>
+      
+      <rect x="580" y="40" width="120" height="50" fill="#27ae60" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="640" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Monitoring</text>
+      <text x="640" y="78" text-anchor="middle" font-size="11" fill="white">Logs/Metrics</text>
+      
+      <rect x="720" y="40" width="120" height="50" fill="#27ae60" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="780" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Security</text>
+      <text x="780" y="78" text-anchor="middle" font-size="11" fill="white">SSL/Firewall</text>
+      
+      <rect x="860" y="40" width="120" height="50" fill="#27ae60" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="920" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Kubernetes</text>
+      <text x="920" y="78" text-anchor="middle" font-size="11" fill="white">Orchestration</text>
+      
+      <rect x="1000" y="40" width="80" height="50" fill="#27ae60" stroke="#2c3e50" stroke-width="1" rx="3"/>
+      <text x="1040" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="white">IaC</text>
+      <text x="1040" y="78" text-anchor="middle" font-size="11" fill="white">Terraform</text>
+    </g>
+  </g>
+  
+  <!-- Learning Tips -->
+  <g transform="translate(50, 760)">
+    <text x="0" y="0" font-size="16" font-weight="bold" fill="#2c3e50">Learning Tips:</text>
+    <text x="150" y="0" font-size="14" fill="#7f8c8d">1. Master fundamentals before frameworks</text>
+    <text x="450" y="0" font-size="14" fill="#7f8c8d">2. Build projects at each stage</text>
+    <text x="700" y="0" font-size="14" fill="#7f8c8d">3. Learn by doing, not just reading</text>
+    <text x="950" y="0" font-size="14" fill="#7f8c8d">4. Join communities</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,247 @@
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="700" y="40" text-anchor="middle" font-size="26" font-weight="bold" fill="#24292e">
+    GitHub-First Fullstack Learning Journey (45 Hours)
+  </text>
+  <text x="700" y="65" text-anchor="middle" font-size="16" fill="#586069">
+    Project-Based Learning Pathway for the AI Era
+  </text>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 90)">
+    <rect x="0" y="0" width="15" height="15" fill="#0366d6" rx="2"/>
+    <text x="20" y="12" font-size="13" fill="#24292e">Setup & Git</text>
+    
+    <rect x="120" y="0" width="15" height="15" fill="#28a745" rx="2"/>
+    <text x="140" y="12" font-size="13" fill="#24292e">Frontend</text>
+    
+    <rect x="240" y="0" width="15" height="15" fill="#6f42c1" rx="2"/>
+    <text x="260" y="12" font-size="13" fill="#24292e">Backend</text>
+    
+    <rect x="360" y="0" width="15" height="15" fill="#fd8c73" rx="2"/>
+    <text x="380" y="12" font-size="13" fill="#24292e">AI Integration</text>
+    
+    <rect x="500" y="0" width="15" height="15" fill="#f9c513" rx="2"/>
+    <text x="520" y="12" font-size="13" fill="#24292e">Deployment</text>
+    
+    <circle cx="650" cy="7" r="7" fill="#0366d6"/>
+    <text x="665" y="12" font-size="13" fill="#24292e">Milestone</text>
+  </g>
+  
+  <!-- Main Timeline -->
+  <line x1="150" y1="150" x2="150" y2="900" stroke="#e1e4e8" stroke-width="3"/>
+  
+  <!-- Week 1: Foundation (15 hours) -->
+  <g transform="translate(150, 150)">
+    <!-- Week marker -->
+    <circle cx="0" cy="0" r="8" fill="#0366d6"/>
+    <text x="20" y="5" font-size="18" font-weight="bold" fill="#24292e">Week 1: GitHub-Centric Foundation</text>
+    
+    <!-- Day 1: GitHub Setup (3.75h) -->
+    <g transform="translate(50, 40)">
+      <rect x="0" y="0" width="400" height="80" fill="#f6f8fa" stroke="#0366d6" stroke-width="2" rx="5"/>
+      <text x="10" y="20" font-size="14" font-weight="bold" fill="#0366d6">Day 1: GitHub Setup & First Repository (3.75h)</text>
+      <text x="10" y="40" font-size="12" fill="#586069">• Create GitHub account, setup profile README</text>
+      <text x="10" y="55" font-size="12" fill="#586069">• Git basics: init, add, commit, push</text>
+      <text x="10" y="70" font-size="12" fill="#586069">• Fork course template repository</text>
+      
+      <!-- Project indicator -->
+      <rect x="420" y="10" width="120" height="60" fill="#0366d6" stroke="#24292e" stroke-width="1" rx="3"/>
+      <text x="480" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="white">PROJECT 1</text>
+      <text x="480" y="50" text-anchor="middle" font-size="10" fill="white">Profile Repo</text>
+    </g>
+    
+    <!-- Day 2: HTML/CSS with Git (3.75h) -->
+    <g transform="translate(50, 140)">
+      <rect x="0" y="0" width="400" height="80" fill="#f6f8fa" stroke="#28a745" stroke-width="2" rx="5"/>
+      <text x="10" y="20" font-size="14" font-weight="bold" fill="#28a745">Day 2: HTML/CSS + Version Control (3.75h)</text>
+      <text x="10" y="40" font-size="12" fill="#586069">• HTML structure (semantic tags)</text>
+      <text x="10" y="55" font-size="12" fill="#586069">• CSS styling (flexbox, grid basics)</text>
+      <text x="10" y="70" font-size="12" fill="#586069">• Commits for each feature</text>
+      
+      <rect x="420" y="10" width="120" height="60" fill="#28a745" stroke="#24292e" stroke-width="1" rx="3"/>
+      <text x="480" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="white">PROJECT</text>
+      <text x="480" y="50" text-anchor="middle" font-size="10" fill="white">Portfolio v1</text>
+    </g>
+    
+    <!-- Day 3: JavaScript & Branches (3.75h) -->
+    <g transform="translate(50, 240)">
+      <rect x="0" y="0" width="400" height="80" fill="#f6f8fa" stroke="#28a745" stroke-width="2" rx="5"/>
+      <text x="10" y="20" font-size="14" font-weight="bold" fill="#28a745">Day 3: JavaScript & Git Branches (3.75h)</text>
+      <text x="10" y="40" font-size="12" fill="#586069">• JavaScript basics (DOM manipulation)</text>
+      <text x="10" y="55" font-size="12" fill="#586069">• Feature branches workflow</text>
+      <text x="10" y="70" font-size="12" fill="#586069">• Pull requests & code review</text>
+      
+      <rect x="420" y="10" width="120" height="60" fill="#28a745" stroke="#24292e" stroke-width="1" rx="3"/>
+      <text x="480" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="white">FEATURE</text>
+      <text x="480" y="50" text-anchor="middle" font-size="10" fill="white">Interactive UI</text>
+    </g>
+    
+    <!-- Day 4: Collaboration & GitHub Pages (3.75h) -->
+    <g transform="translate(50, 340)">
+      <rect x="0" y="0" width="400" height="80" fill="#f6f8fa" stroke="#f9c513" stroke-width="2" rx="5"/>
+      <text x="10" y="20" font-size="14" font-weight="bold" fill="#f9c513">Day 4: Deploy & Collaborate (3.75h)</text>
+      <text x="10" y="40" font-size="12" fill="#586069">• GitHub Pages deployment</text>
+      <text x="10" y="55" font-size="12" fill="#586069">• Issues & project boards</text>
+      <text x="10" y="70" font-size="12" fill="#586069">• Pair programming via Live Share</text>
+      
+      <rect x="420" y="10" width="120" height="60" fill="#f9c513" stroke="#24292e" stroke-width="1" rx="3"/>
+      <text x="480" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MILESTONE</text>
+      <text x="480" y="50" text-anchor="middle" font-size="10" fill="white">Live Portfolio</text>
+    </g>
+  </g>
+  
+  <!-- Week 2: Modern Stack (15 hours) -->
+  <g transform="translate(150, 600)">
+    <circle cx="0" cy="0" r="8" fill="#0366d6"/>
+    <text x="20" y="5" font-size="18" font-weight="bold" fill="#24292e">Week 2: Modern Development Stack</text>
+    
+    <!-- Day 5-6: React + GitHub Copilot -->
+    <g transform="translate(50, 40)">
+      <rect x="0" y="0" width="400" height="80" fill="#f6f8fa" stroke="#28a745" stroke-width="2" rx="5"/>
+      <text x="10" y="20" font-size="14" font-weight="bold" fill="#28a745">Day 5-6: React + AI Tools (7.5h)</text>
+      <text x="10" y="40" font-size="12" fill="#586069">• React components & hooks</text>
+      <text x="10" y="55" font-size="12" fill="#586069">• GitHub Copilot integration</text>
+      <text x="10" y="70" font-size="12" fill="#586069">• AI-assisted component generation</text>
+      
+      <rect x="420" y="10" width="120" height="60" fill="#28a745" stroke="#24292e" stroke-width="1" rx="3"/>
+      <text x="480" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="white">PROJECT 2</text>
+      <text x="480" y="50" text-anchor="middle" font-size="10" fill="white">Task Manager</text>
+    </g>
+    
+    <!-- Day 7-8: Backend + Database -->
+    <g transform="translate(50, 140)">
+      <rect x="0" y="0" width="400" height="80" fill="#f6f8fa" stroke="#6f42c1" stroke-width="2" rx="5"/>
+      <text x="10" y="20" font-size="14" font-weight="bold" fill="#6f42c1">Day 7-8: Node.js + MongoDB (7.5h)</text>
+      <text x="10" y="40" font-size="12" fill="#586069">• Express.js API setup</text>
+      <text x="10" y="55" font-size="12" fill="#586069">• MongoDB + Mongoose</text>
+      <text x="10" y="70" font-size="12" fill="#586069">• Environment variables (.env)</text>
+      
+      <rect x="420" y="10" width="120" height="60" fill="#6f42c1" stroke="#24292e" stroke-width="1" rx="3"/>
+      <text x="480" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="white">BACKEND</text>
+      <text x="480" y="50" text-anchor="middle" font-size="10" fill="white">REST API</text>
+    </g>
+  </g>
+  
+  <!-- Week 3: AI Integration & Deployment (15 hours) -->
+  <g transform="translate(150, 850)">
+    <circle cx="0" cy="0" r="8" fill="#0366d6"/>
+    <text x="20" y="5" font-size="18" font-weight="bold" fill="#24292e">Week 3: AI Integration & Production</text>
+  </g>
+  
+  <!-- Project Flow Diagram -->
+  <g transform="translate(750, 150)">
+    <text x="275" y="0" text-anchor="middle" font-size="20" font-weight="bold" fill="#24292e">Project Evolution Flow</text>
+    
+    <!-- Project 1 -->
+    <g transform="translate(0, 40)">
+      <rect x="0" y="0" width="200" height="60" fill="#0366d6" stroke="#24292e" stroke-width="2" rx="5"/>
+      <text x="100" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Project 1: Portfolio</text>
+      <text x="100" y="45" text-anchor="middle" font-size="12" fill="white">HTML/CSS/JS + Git</text>
+    </g>
+    
+    <!-- Arrow -->
+    <path d="M 100 110 L 100 130" stroke="#24292e" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Project 2 -->
+    <g transform="translate(0, 140)">
+      <rect x="0" y="0" width="200" height="60" fill="#28a745" stroke="#24292e" stroke-width="2" rx="5"/>
+      <text x="100" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Project 2: Task App</text>
+      <text x="100" y="45" text-anchor="middle" font-size="12" fill="white">React + Node.js</text>
+    </g>
+    
+    <!-- Arrow -->
+    <path d="M 100 210 L 100 230" stroke="#24292e" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Project 3 -->
+    <g transform="translate(0, 240)">
+      <rect x="0" y="0" width="200" height="60" fill="#fd8c73" stroke="#24292e" stroke-width="2" rx="5"/>
+      <text x="100" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Project 3: AI App</text>
+      <text x="100" y="45" text-anchor="middle" font-size="12" fill="white">Full Stack + AI APIs</text>
+    </g>
+    
+    <!-- Git Flow Diagram -->
+    <g transform="translate(250, 40)">
+      <text x="150" y="0" text-anchor="middle" font-size="16" font-weight="bold" fill="#24292e">Git Workflow Pattern</text>
+      
+      <!-- Main branch -->
+      <line x1="0" y1="30" x2="300" y2="30" stroke="#0366d6" stroke-width="4"/>
+      <text x="10" y="25" font-size="12" fill="#0366d6">main</text>
+      
+      <!-- Feature branches -->
+      <path d="M 50 30 Q 80 10 110 30" stroke="#28a745" stroke-width="3" fill="none"/>
+      <circle cx="80" cy="10" r="3" fill="#28a745"/>
+      <text x="70" y="5" font-size="10" fill="#28a745">feature</text>
+      
+      <path d="M 150 30 Q 180 10 210 30" stroke="#28a745" stroke-width="3" fill="none"/>
+      <circle cx="180" cy="10" r="3" fill="#28a745"/>
+      <text x="165" y="5" font-size="10" fill="#28a745">enhancement</text>
+      
+      <path d="M 250 30 Q 280 50 310 30" stroke="#ffd33d" stroke-width="3" fill="none"/>
+      <circle cx="280" cy="50" r="3" fill="#ffd33d"/>
+      <text x="265" y="65" font-size="10" fill="#ffd33d">bugfix</text>
+      
+      <!-- Commits -->
+      <circle cx="50" cy="30" r="4" fill="#0366d6"/>
+      <circle cx="110" cy="30" r="4" fill="#0366d6"/>
+      <circle cx="150" cy="30" r="4" fill="#0366d6"/>
+      <circle cx="210" cy="30" r="4" fill="#0366d6"/>
+      <circle cx="250" cy="30" r="4" fill="#0366d6"/>
+    </g>
+  </g>
+  
+  <!-- Skills Progression -->
+  <g transform="translate(750, 450)">
+    <text x="275" y="0" text-anchor="middle" font-size="20" font-weight="bold" fill="#24292e">Skills Progression</text>
+    
+    <!-- Skill bars -->
+    <g transform="translate(0, 30)">
+      <text x="0" y="15" font-size="14" fill="#24292e">Git/GitHub</text>
+      <rect x="100" y="0" width="450" height="20" fill="#e1e4e8" rx="3"/>
+      <rect x="100" y="0" width="450" height="20" fill="#0366d6" rx="3"/>
+      
+      <text x="0" y="45" font-size="14" fill="#24292e">HTML/CSS</text>
+      <rect x="100" y="30" width="450" height="20" fill="#e1e4e8" rx="3"/>
+      <rect x="100" y="30" width="350" height="20" fill="#28a745" rx="3"/>
+      
+      <text x="0" y="75" font-size="14" fill="#24292e">JavaScript</text>
+      <rect x="100" y="60" width="450" height="20" fill="#e1e4e8" rx="3"/>
+      <rect x="100" y="60" width="300" height="20" fill="#28a745" rx="3"/>
+      
+      <text x="0" y="105" font-size="14" fill="#24292e">React</text>
+      <rect x="100" y="90" width="450" height="20" fill="#e1e4e8" rx="3"/>
+      <rect x="100" y="90" width="250" height="20" fill="#28a745" rx="3"/>
+      
+      <text x="0" y="135" font-size="14" fill="#24292e">Node.js</text>
+      <rect x="100" y="120" width="450" height="20" fill="#e1e4e8" rx="3"/>
+      <rect x="100" y="120" width="200" height="20" fill="#6f42c1" rx="3"/>
+      
+      <text x="0" y="165" font-size="14" fill="#24292e">AI Tools</text>
+      <rect x="100" y="150" width="450" height="20" fill="#e1e4e8" rx="3"/>
+      <rect x="100" y="150" width="300" height="20" fill="#fd8c73" rx="3"/>
+      
+      <text x="0" y="195" font-size="14" fill="#24292e">Deployment</text>
+      <rect x="100" y="180" width="450" height="20" fill="#e1e4e8" rx="3"/>
+      <rect x="100" y="180" width="250" height="20" fill="#f9c513" rx="3"/>
+    </g>
+  </g>
+  
+  <!-- Learning Outcomes -->
+  <g transform="translate(750, 700)">
+    <rect x="0" y="0" width="550" height="150" fill="#f6f8fa" stroke="#24292e" stroke-width="2" rx="5"/>
+    <text x="275" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#24292e">Learning Outcomes</text>
+    
+    <text x="20" y="50" font-size="14" fill="#24292e">✓ Professional GitHub profile with 3 deployed projects</text>
+    <text x="20" y="70" font-size="14" fill="#24292e">✓ Git workflow mastery (branches, PRs, issues)</text>
+    <text x="20" y="90" font-size="14" fill="#24292e">✓ Full-stack application with AI features</text>
+    <text x="20" y="110" font-size="14" fill="#24292e">✓ Collaboration and code review experience</text>
+    <text x="20" y="130" font-size="14" fill="#24292e">✓ Industry-ready development practices</text>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#24292e"/>
+    </marker>
+  </defs>
+</svg>
