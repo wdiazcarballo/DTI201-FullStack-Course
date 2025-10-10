@@ -57,7 +57,7 @@ import express from 'express';
 3. เปิด PowerShell ตรวจสอบ:
 ```powershell
 docker --version
-docker-compose --version
+docker compose --version
 ```
 
 ### 2.2 macOS
