@@ -8,7 +8,7 @@
 2. [ติดตั้ง Docker](#2-ติดตั้ง-docker)
 3. [พื้นฐาน Docker](#3-พื้นฐาน-docker)
 4. [สร้าง Docker Image สำหรับ Web Application](#4-สร้าง-docker-image-สำหรับ-web-application)
-5. [Docker Compose สำหรับ Full-Stack](#5-docker-compose-สำหรับ-full-stack)
+5. [Docker Compose สำหรับ Full-Stack](#5-docker compose-สำหรับ-full-stack)
 6. [Workshop: Containerize Your MVP](#6-workshop-containerize-your-mvp)
 7. [การบ้านและการประเมินผล](#7-การบ้านและการประเมินผล)
 
@@ -66,7 +66,7 @@ docker compose --version
 3. เปิด Terminal ตรวจสอบ:
 ```bash
 docker --version
-docker-compose --version
+docker compose --version
 ```
 
 ### 2.3 Linux (Ubuntu)
@@ -75,7 +75,7 @@ docker-compose --version
 sudo apt-get update
 
 # Install Docker
-sudo apt-get install docker.io docker-compose
+sudo apt-get install docker.io docker compose
 
 # Add user to docker group
 sudo usermod -aG docker $USER
@@ -490,7 +490,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ### 5.2 สร้าง Docker Compose
 
-#### Step 6: สร้าง docker-compose.yml ที่ root
+#### Step 6: สร้าง docker compose.yml ที่ root
 ```yaml
 version: '3.8'
 
@@ -577,22 +577,22 @@ CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "3000"]
 #### Step 8: เริ่มต้นใช้งาน Docker Compose
 ```bash
 # Build images ทั้งหมด
-docker-compose build
+docker compose build
 
 # รัน services ทั้งหมด
-docker-compose up
+docker compose up
 
 # รันแบบ background
-docker-compose up -d
+docker compose up -d
 
 # ดู logs ของทุก services
-docker-compose logs -f
+docker compose logs -f
 
 # ดู logs เฉพาะ service
-docker-compose logs -f backend
+docker compose logs -f backend
 
 # ดูสถานะ containers
-docker-compose ps
+docker compose ps
 ```
 
 #### Step 9: ทดสอบ Application
@@ -603,25 +603,25 @@ docker-compose ps
 #### Step 10: คำสั่งจัดการ Docker Compose
 ```bash
 # หยุด services ทั้งหมด
-docker-compose stop
+docker compose stop
 
 # เริ่ม services ที่หยุดไว้
-docker-compose start
+docker compose start
 
 # Restart service เฉพาะ
-docker-compose restart backend
+docker compose restart backend
 
 # ลบ containers และ networks
-docker-compose down
+docker compose down
 
 # ลบรวม volumes (ระวัง! ข้อมูลจะหาย)
-docker-compose down -v
+docker compose down -v
 
 # Rebuild แบบ no-cache
-docker-compose build --no-cache
+docker compose build --no-cache
 
 # Scale service (รันหลาย instances)
-docker-compose up --scale backend=3
+docker compose up --scale backend=3
 ```
 
 ---
@@ -704,7 +704,7 @@ EXPOSE [YOUR_PORT]
 CMD ["npm", "start"]
 ```
 
-#### Phase 3: Create docker-compose.yml (15 นาที)
+#### Phase 3: Create docker compose.yml (15 นาที)
 ```yaml
 version: '3.8'
 
@@ -786,8 +786,8 @@ DB_NAME=
 #### ทดสอบ Build
 ```bash
 # Test build แต่ละ service
-docker-compose build frontend
-docker-compose build backend
+docker compose build frontend
+docker compose build backend
 
 # ดู images ที่สร้าง
 docker images | head -10
@@ -801,7 +801,7 @@ docker images | head -10
 lsof -i :3000  # macOS/Linux
 netstat -ano | findstr :3000  # Windows
 
-# เปลี่ยน port ใน docker-compose.yml
+# เปลี่ยน port ใน docker compose.yml
 ports:
   - "3001:3000"  # เปลี่ยนไปใช้ 3001
 ```
@@ -812,7 +812,7 @@ ports:
 node_modules
 npm-debug.log
 
-# ใน docker-compose.yml ใช้ anonymous volume
+# ใน docker compose.yml ใช้ anonymous volume
 volumes:
   - ./app:/app
   - /app/node_modules  # Preserve container's node_modules
@@ -860,7 +860,7 @@ depends_on:
 
 3. Build and run with Docker Compose
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 
 4. Access applications
@@ -876,19 +876,19 @@ depends_on:
 ## Common Commands
 ```bash
 # Start all services
-docker-compose up
+docker compose up
 
 # Stop all services
-docker-compose down
+docker compose down
 
 # View logs
-docker-compose logs -f [service-name]
+docker compose logs -f [service-name]
 
 # Rebuild after changes
-docker-compose build [service-name]
+docker compose build [service-name]
 
 # Enter container shell
-docker-compose exec [service-name] sh
+docker compose exec [service-name] sh
 ```
 
 ## Troubleshooting
@@ -903,9 +903,9 @@ docker-compose exec [service-name] sh
 
 #### Task 1: Complete Docker Setup (40%)
 - [ ] สร้าง Dockerfile สำหรับทุก services
-- [ ] สร้าง docker-compose.yml ที่ทำงานได้
+- [ ] สร้าง docker compose.yml ที่ทำงานได้
 - [ ] เพิ่ม health checks สำหรับ services
-- [ ] ทดสอบว่า `docker-compose up` ทำงานได้
+- [ ] ทดสอบว่า `docker compose up` ทำงานได้
 
 #### Task 2: Multi-Stage Build (20%)
 ```dockerfile
@@ -941,7 +941,7 @@ git clone https://github.com/yourteam/project
 cd project
 
 # Start everything
-docker-compose up
+docker compose up
 
 # Access at http://localhost:3000
 ```
@@ -952,7 +952,7 @@ docker-compose up
 ### Container Structure
 ```
 project/
-├── docker-compose.yml
+├── docker compose.yml
 ├── frontend/
 │   └── Dockerfile
 ├── backend/
@@ -965,7 +965,7 @@ project/
 #### Task 4: API Documentation (10%)
 ใช้ Swagger หรือ Postman สร้าง API docs:
 ```yaml
-# docker-compose.yml เพิ่ม
+# docker compose.yml เพิ่ม
 swagger:
   image: swaggerapi/swagger-ui
   ports:
@@ -1002,7 +1002,7 @@ swagger:
 
 | เกณฑ์ | คะแนน | รายละเอียด |
 |-------|-------|------------|
-| **Technical Implementation** | 40% | Dockerfile, docker-compose.yml ถูกต้องและใช้งานได้ |
+| **Technical Implementation** | 40% | Dockerfile, docker compose.yml ถูกต้องและใช้งานได้ |
 | **Best Practices** | 20% | Multi-stage build, .dockerignore, security |
 | **Documentation** | 20% | README, API docs, setup guide ชัดเจน |
 | **Team Collaboration** | 10% | Git commits, code review, sprint retro |
@@ -1014,7 +1014,7 @@ swagger:
 - [ ] Tag version: `git tag -a week11-docker -m "Docker implementation"`
 - [ ] Update README.md
 - [ ] Create DOCKER_SETUP.md
-- [ ] Test `docker-compose up` บน clean environment
+- [ ] Test `docker compose up` บน clean environment
 - [ ] Submit link ใน Microsoft Teams
 
 ---
@@ -1055,11 +1055,11 @@ swagger:
 ### ⚡ Quick Commands Reference
 ```bash
 # ชีวิตง่ายขึ้นด้วย aliases
-alias dc='docker-compose'
-alias dcu='docker-compose up'
-alias dcd='docker-compose down'
-alias dcl='docker-compose logs -f'
-alias dce='docker-compose exec'
+alias dc='docker compose'
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+alias dcl='docker compose logs -f'
+alias dce='docker compose exec'
 ```
 
 ---
