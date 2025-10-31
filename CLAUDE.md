@@ -4,105 +4,216 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is an educational repository for the DTI201 Full-Stack Development course, focusing on teaching GitHub workflows, CI/CD practices, and modern web development. The repository contains hands-on tutorials, visual learning materials, and comprehensive roadmaps for full-stack development.
+This is an educational repository for the **DTI201 Full-Stack Development course**, designed to teach modern web development through hands-on tutorials and workshops. The content is delivered in Thai language with practical, project-based learning materials covering GitHub workflows, React/Vite SPAs, Docker containerization, and database best practices.
 
-## Current Repository Structure
+## Course Structure
 
-### Main Content
-- **1 Github Workflow.md**: Complete hands-on tutorial for GitHub workflow using a Random Quote Generator project
-- **assets/**: Visual learning materials including full-stack development roadmaps and workflow diagrams
-- **README.md**: Basic repository identifier
+The repository contains sequential tutorial modules, each designed for ~60-90 minute sessions:
 
-## Key Tutorial: Random Quote Generator
+1. **GitHub Workflow** - Random Quote Generator with CI/CD
+2. **Vite & React SPA** - Single Page Application development
+3. **JavaScript Modules** - CommonJS vs ES Modules
+4. **Code Quality** - Refactoring and best practices
+5. **Database Connection** - MongoDB/Mongoose patterns
+6. **API Testing** - CURL command reference
+7. **Docker Basics** - Container fundamentals (Week 11)
+8. **Git CLI & Workflow** - Version control practices
+9. **Docker Commands** - Web hosting with Docker Compose
 
-The main hands-on project demonstrates:
-- Complete GitHub workflow (branch → commit → PR → review → merge)
-- GitHub Actions CI/CD pipeline
-- GitHub Pages deployment
-- HTML/CSS/JavaScript fundamentals
+## Technology Stack
 
-### Project Files Structure
+### Frontend
+- **React 18** with Vite build tool
+- ES6+ JavaScript (prefer ES Modules syntax)
+- React Router for SPA navigation
+- Lazy loading with React.lazy() and Suspense
+
+### Backend
+- **Node.js 14-18** (Alpine images preferred for Docker)
+- Express.js for REST APIs
+- Mongoose for MongoDB ODM
+- CORS middleware for cross-origin requests
+
+### DevOps & Tools
+- **Docker & Docker Compose** for containerization
+- GitHub Actions for CI/CD
+- GitHub Pages for static deployments
+- Nginx as reverse proxy in production
+
+### Database
+- MongoDB (local or Atlas)
+- PostgreSQL (in Docker examples)
+- Connection pooling with retry logic
+
+## Key Development Patterns
+
+### Module System
+Always use **ES Modules** (not CommonJS) for new code:
+```javascript
+// ✅ Preferred
+import express from 'express';
+export const myFunction = () => {};
+
+// ❌ Avoid
+const express = require('express');
+module.exports = myFunction;
 ```
-quote-generator/
-├── index.html    # Main HTML structure
-├── styles.css    # Styling with gradients and flexbox
-├── script.js     # Quote rotation logic
-└── .github/
-    └── workflows/
-        └── deploy.yml  # CI/CD pipeline
+
+Files must use `.js` extension with `"type": "module"` in package.json.
+
+### Database Connection
+Use connection pooling with proper error handling and graceful shutdown:
+```javascript
+// Structure: db/connection.js exports singleton
+await dbConnection.connect();
+// With retry logic and event listeners
 ```
 
-## Essential Commands
+Never hardcode connection strings - use environment variables via `.env` files.
 
-### Git Workflow Commands
+### Docker Workflows
+All Docker projects follow this structure:
+```
+project/
+├── docker-compose.yml
+├── .env.example
+├── frontend/
+│   └── Dockerfile
+├── backend/
+│   └── Dockerfile
+└── nginx/
+    └── default.conf
+```
+
+Use multi-stage builds for production images to minimize size.
+
+## Common Commands
+
+### Development Setup
 ```bash
-# Clone repository
-git clone https://github.com/[username]/quote-generator-[yourname].git
+# Install dependencies
+npm install
 
+# Start development server (Vite)
+npm run dev
+
+# Start Express backend
+npm start
+npm run dev  # with nodemon
+```
+
+### Docker Commands
+```bash
+# Start all services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f [service-name]
+
+# Rebuild after changes
+docker-compose up -d --build
+
+# Stop and remove everything
+docker-compose down -v
+
+# Enter container shell
+docker-compose exec [service-name] sh
+```
+
+### Testing APIs
+```bash
+# Health check
+curl http://localhost:PORT/api/health
+
+# CRUD operations (examples in tutorial 6)
+curl -X POST http://localhost:3000/contact \
+  -H "Content-Type: application/json" \
+  -d '{"firstName":"Test"}'
+```
+
+### Git Workflow
+Follow GitHub Flow pattern:
+```bash
 # Create feature branch
 git checkout -b feature/[feature-name]
 
-# Stage and commit changes
-git add .
+# Commit with conventional commits
 git commit -m "feat: description"
+git commit -m "fix: description"
 
-# Push branch
-git push origin [branch-name]
-
-# Create pull request (using GitHub CLI)
-gh pr create --title "Add feature" --body "Description of changes"
+# Create PR using GitHub CLI
+gh pr create --title "Title" --body "Description"
 ```
 
-### GitHub Actions Workflow
-The tutorial includes setting up automated CI/CD with:
-- HTML validation using `html-validator-cli`
-- JavaScript syntax checking with `node -c`
-- Automatic deployment to GitHub Pages on merge to main
+## Project Architecture Notes
 
-### Local Development
-```bash
-# For the static quote generator project
-# No build process required - open index.html directly in browser
+### Quote Generator (Tutorial 1)
+- Vanilla HTML/CSS/JS with GitHub Actions deployment
+- CI pipeline validates HTML and checks JS syntax
+- Auto-deploys to GitHub Pages on main branch merge
+- Structure: index.html, styles.css, script.js, .github/workflows/deploy.yml
 
-# If using Live Server extension in VS Code
-# Right-click index.html → "Open with Live Server"
-```
+### React SPA Pattern (Tutorial 2)
+- Component-based architecture with hooks (useState, useEffect)
+- Custom hooks for reusable logic (e.g., useLocalStorage)
+- Error boundaries for graceful error handling
+- Route-based code splitting for performance
+- Environment variables prefixed with VITE_
 
-## Learning Path Technologies
+### Docker Full-Stack Setup (Tutorials 7, 9)
+- Frontend: Node builder → Nginx static server
+- Backend: Node with nodemon for hot reload
+- Database: PostgreSQL/MongoDB with volume persistence
+- Network: All services in shared bridge network
+- Health checks on database service with condition-based depends_on
 
-Based on the full-stack roadmap in assets/, the course covers:
+### Database Best Practices (Tutorial 5)
+- Singleton connection class with connection pooling
+- Retry logic with exponential backoff (5 retries default)
+- Event listeners for connection lifecycle
+- Graceful shutdown on SIGINT
+- Health check middleware for API routes
 
-### Frontend Stack
-- HTML5, CSS3, JavaScript (ES6+)
-- React.js, Next.js
-- TypeScript
-- State Management (Redux/Context)
-- Testing with Jest
+## File Naming Conventions
 
-### Backend Stack
-- Node.js, Express.js
-- RESTful APIs, GraphQL
-- Authentication (JWT, OAuth)
-- Testing with Mocha/Jest
+- Tutorial files: Numbered with Thai descriptions (e.g., "7 Docker.md")
+- Use `.cjs` extension for CommonJS in ES Module projects
+- Docker files: `Dockerfile` (production), `Dockerfile.dev` (development)
+- Config files: `.env` (gitignored), `.env.example` (committed)
 
-### Database & DevOps
-- MongoDB (NoSQL), PostgreSQL (SQL)
-- Docker, Kubernetes
-- GitHub Actions CI/CD
-- Cloud platforms (AWS, GCP)
+## Workshop Format
 
-## Project Implementation Timeline
-
-The GitHub Workflow tutorial follows this 60-minute structure:
-1. **0:00-0:15**: Repository setup and initial code
-2. **0:15-0:25**: Feature branch workflow
-3. **0:25-0:35**: Pull request and code review
-4. **0:35-0:50**: GitHub Actions CI/CD setup
-5. **0:50-0:60**: Deployment and wrap-up
+Each tutorial follows this structure:
+1. **Learning Objectives** - Clear goals (5 min)
+2. **Prerequisites Check** - Required tools/knowledge
+3. **Hands-on Labs** - Step-by-step implementations (40-60 min)
+4. **Troubleshooting** - Common errors and solutions
+5. **Homework/Extensions** - Additional challenges
+6. **Assessment Criteria** - CLO mapping with percentages
 
 ## Important Notes
 
-1. **Educational Focus**: This repository is designed for learning - prioritize clear, well-commented code that demonstrates concepts
-2. **GitHub Pages**: The quote generator deploys automatically to `https://[username].github.io/quote-generator-[yourname]/`
-3. **Branch Protection**: The tutorial recommends enabling branch protection rules for the main branch
-4. **Code Reviews**: Emphasize proper PR descriptions and constructive code review practices
+- All tutorials are designed for **60-90 minute sessions**
+- Content is bilingual: Thai instructions with English code/commands
+- Emphasize "why" over "what" in explanations
+- Include real-world debugging scenarios
+- Projects build on each other sequentially
+
+## Documentation Standards
+
+When creating or updating tutorials:
+- Include timing estimates for each section
+- Provide complete, runnable code examples
+- Show both error cases and solutions
+- Use emoji sparingly for visual organization (📚 🔧 ✅ ❌)
+- Include cheat sheets and command references
+- Map to Course Learning Outcomes (CLOs) where applicable
+
+## Troubleshooting References
+
+Common issues are documented in each tutorial:
+- Port conflicts → Change ports in docker-compose.yml
+- Permission errors → Use `--chown` in Dockerfile COPY
+- Module not found → Check `.js` extension in imports
+- Database connection refused → Use service names, not localhost
+- Container exits immediately → Check logs with docker-compose logs
